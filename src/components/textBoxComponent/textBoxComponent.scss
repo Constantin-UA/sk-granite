@@ -1,0 +1,17 @@
+@import '../../style/variables';
+.text-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	background: $msg-bg-color;
+	box-shadow: 0px 0px 5px $text-shadow-logo-color;
+	border-radius: 0.5rem;
+}
+.text {
+	font-size: $text-size;
+	color: $text-shadow-logo-color;
+	text-align: center;
+	text-shadow: 1px 1px 2px #b3afa6;
+}

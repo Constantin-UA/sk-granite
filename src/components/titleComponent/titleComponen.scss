@@ -1,0 +1,8 @@
+@import '../../style/variables';
+
+.title {
+	font-size: $title-size;
+	font-weight: bold;
+	color: $text-shadow-logo-color;
+	text-align: center;
+}

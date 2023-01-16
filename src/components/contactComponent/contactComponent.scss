@@ -1,0 +1,35 @@
+@import '../../style/variables';
+.contact-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	width: fit-content;
+	min-width: 360px;
+	background: $msg-bg-color;
+	box-shadow: 0px 0px 5px $text-shadow-logo-color;
+	border-radius: 0.5rem;
+	&-title {
+		font-weight: 500;
+		font-size: $subtitle-size;
+		display: flex;
+		align-items: center;
+		color: $text-shadow-logo-color;
+		text-shadow: 1px 1px 2px #b3afa6;
+	}
+	&-subtitle {
+		font-size: $text-size;
+		color: $text-shadow-logo-color;
+		text-align: center;
+		text-shadow: 1px 1px 2px #b3afa6;
+	}
+	&-social-box {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 0px;
+		gap: 30px;
+	}
+}

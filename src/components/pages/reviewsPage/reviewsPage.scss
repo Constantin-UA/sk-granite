@@ -1,0 +1,17 @@
+@import '../../../style/variables';
+.reviewsPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0px;
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 15px 15px;
+		gap: 15px;
+	}
+	&-sub {
+		text-align: left;
+	}
+}

@@ -1,0 +1,14 @@
+.app {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(191.73deg, #ddd9cf 1.23%, #98948c 100%);
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
