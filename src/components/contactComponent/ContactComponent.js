@@ -12,7 +12,7 @@ function ContactComponent() {
 				<p>т. +380682917817</p>
 			</div>
 			<div className="contact-box-title">Електрона адреса</div>
-			<div className="contact-box-subtitle">sk_granite@i.ua</div>
+			<div className="contact-box-subtitle">sk_granite@ukr.net</div>
 			<div className="contact-box-title">Соціальні мережі</div>
 			<div className="contact-box-social-box">
 				<div className="contact-box-social-item">
