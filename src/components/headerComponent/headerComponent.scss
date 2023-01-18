@@ -26,8 +26,22 @@
 		p {
 			font-weight: 400;
 			font-size: 22px;
-			line-height: 33px;
 			color: #e1ba87;
 		}
 	}
+	&-menu-open {
+		position: absolute;
+		top: 16px;
+		right: 8px;
+		width: 40px;
+		height: 32px;
+		z-index: 10;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+.show {
+	display: flex;
 }
