@@ -2,7 +2,7 @@ import TitleComponent from '../../titleComponent/TitleComponent';
 import SectionImageComponent from '../../sectionImageComponent/SectionImageComponent';
 import SubtitleComponent from '../../subtitleComponent/SubtitleComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
-import img_0 from '../../../assets/reviewsPage/Image.png';
+import img_0 from '../../../assets/headImages/reviews.png';
 import img_1 from '../../../assets/reviewsPage/1.png';
 import img_2 from '../../../assets/reviewsPage/2.png';
 import img_3 from '../../../assets/reviewsPage/3.png';

@@ -2,9 +2,11 @@
 .reviewsPage {
 	display: block;
 	padding: 0px;
-	width: 98.5%;
+	width: $pageWidth;
 	min-height: 100vh;
 	&-wrapper {
+		margin: 0 auto;
+		max-width: 1366px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -13,5 +15,14 @@
 	}
 	&-sub {
 		text-align: left;
+	}
+}
+@media (max-width: 320px) {
+	.reviewsPage {
+		&-wrapper {
+			align-items: center;
+			padding: 16px 0px;
+			gap: 16px;
+		}
 	}
 }

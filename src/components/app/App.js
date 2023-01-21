@@ -35,13 +35,13 @@ function App() {
 					<HeaderComponent />
 				</header>
 
-				<main>
+				{/* 				<main>
 					<Routes>
 						{routers.map((item, idx) => {
 							return <Route key={idx} path={item.path} element={item.element} />;
 						})}
 					</Routes>
-				</main>
+				</main> */}
 
 				<footer>
 					<FooterComponent />

@@ -9,20 +9,22 @@ function HeaderComponent() {
 	return (
 		<section className="headerComponent">
 			<div className="headerComponent-wrapper">
-				<div className="headerComponent-logo">
-					<img src={logo} alt="Logotip SK granite" />
+				<div className="headerComponent-box">
+					<div className="headerComponent-logo">
+						<img src={logo} alt="Logotip SK granite" />
+					</div>
+					<div className="headerComponent-addres-text">
+						<p>Наша адреса:</p>
+						<p>м. Дніпро</p>
+						<p>п. Мануйловський 18б</p>
+						<p>т. +380682917817</p>
+					</div>
 				</div>
-				<div className="headerComponent-addres-text">
-					<p>Наша адреса:</p>
-					<p>м. Дніпро</p>
-					<p>п. Мануйловський 18б</p>
-					<p>т. +380682917817</p>
-				</div>
+				<MenuComponent />
 			</div>
 			<div className="headerComponent-menu-open" onClick={() => showMenu()}>
 				<img src={menu} alt="button open menu" />
 			</div>
-			<MenuComponent />
 		</section>
 	);
 }

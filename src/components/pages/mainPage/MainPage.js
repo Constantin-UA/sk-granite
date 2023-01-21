@@ -2,10 +2,13 @@ import TitleComponent from '../../titleComponent/TitleComponent';
 import SectionImageComponent from '../../sectionImageComponent/SectionImageComponent';
 import SubtitleComponent from '../../subtitleComponent/SubtitleComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
-import img_0 from '../../../assets/main/Logo.png';
-import img_1 from '../../../assets/main/2.png';
-import img_2 from '../../../assets/main/3.png';
-import img_3 from '../../../assets/main/4.png';
+import img_0 from '../../../assets/headImages/main.png';
+import img_1 from '../../../assets/main/1.png';
+import img_2 from '../../../assets/main/2.png';
+import img_3 from '../../../assets/main/3.png';
+import img_4 from '../../../assets/main/4.png';
+import img_5 from '../../../assets/main/5.png';
+import img_6 from '../../../assets/main/6.png';
 import './mainPage.scss';
 const texts = [
 	"Встановлення надгробка в місці упокою людини – спосіб висловити йому свою відданість, віддати шану. Не обов'язково вибирати найдорожчий, адже установка навіть скромного гранітного надгробка, яка демонструє ваше щире бажання увічнити пам'ять про близьку людину, що вже пішла, вже коштує багато чого. Так виявляється ваша любов до нього.",
@@ -22,11 +25,20 @@ function MainPage() {
 				<SectionImageComponent img={img_0} />
 				<SubtitleComponent subtitle="Що ми пропонуємо" />
 				<TextBoxComponent text={texts[0]} />
-				<SectionImageComponent img={img_1} />
+				<div className="col-wrapper">
+					<SectionImageComponent img={img_1} />
+					<SectionImageComponent img={img_2} />
+				</div>
 				<TextBoxComponent text={texts[1]} />
-				<SectionImageComponent img={img_2} />
+				<div className="col-wrapper">
+					<SectionImageComponent img={img_3} />
+					<SectionImageComponent img={img_4} />
+				</div>
 				<TextBoxComponent text={texts[2]} />
-				<SectionImageComponent img={img_3} />
+				<div className="row-wrapper">
+					<SectionImageComponent img={img_5} />
+					<SectionImageComponent img={img_6} />
+				</div>
 				<TextBoxComponent text={texts[3]} />
 			</div>
 		</section>

@@ -1,10 +1,13 @@
 import TitleComponent from '../../titleComponent/TitleComponent';
 import SectionImageComponent from '../../sectionImageComponent/SectionImageComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
-import img_0 from '../../../assets/about/image.png';
+import img_0 from '../../../assets/headImages/about.png';
 import img_1 from '../../../assets/about/1.png';
 import img_2 from '../../../assets/about/2.png';
 import img_3 from '../../../assets/about/3.png';
+import img_4 from '../../../assets/about/4.png';
+import img_5 from '../../../assets/about/5.png';
+import img_6 from '../../../assets/about/6.png';
 import './aboutPage.scss';
 const texts = [
 	"У нашій майстерні працюють кваліфіковані, досвідчені фахівці та є все необхідне обладнання для створення пам'ятників, гідних ваших близьких людей. Цей виріб вибирається один раз і встановлюється на довгі роки, тому ми намагаємось догодити клієнтам у будь-якій дрібниці при їх виготовленні. Так, ми пропонуємо купити пам'ятники на могилу, дизайн якої розробляється на сучасній комп'ютерній апаратурі, із застосуванням технології 3D моделювання. Ми маємо інструмент і техніку для нанесення складного гравіювання.",
@@ -20,11 +23,20 @@ function aboutPage() {
 				<TitleComponent title="Про нас" />
 				<SectionImageComponent img={img_0} />
 				<TextBoxComponent text={texts[0]} />
-				<SectionImageComponent img={img_1} />
+				<div className="col-wrapper">
+					<SectionImageComponent img={img_1} />
+					<SectionImageComponent img={img_2} />
+				</div>
 				<TextBoxComponent text={texts[1]} />
-				<SectionImageComponent img={img_2} />
+				<div className="row-wrapper">
+					<SectionImageComponent img={img_3} />
+					<SectionImageComponent img={img_4} />
+				</div>
 				<TextBoxComponent text={texts[2]} />
-				<SectionImageComponent img={img_3} />
+				<div className="col-wrapper">
+					<SectionImageComponent img={img_5} />
+					<SectionImageComponent img={img_6} />
+				</div>
 				<TextBoxComponent text={texts[3]} />
 			</div>
 		</section>
