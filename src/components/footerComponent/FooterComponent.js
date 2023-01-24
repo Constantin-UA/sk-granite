@@ -1,11 +1,6 @@
 import logo from '../../assets/footer/logo.png';
-import './footerComponent.scss';
 
-<div
-	class="a2a_kit a2a_kit_size_32 a2a_default_style"
-	data-a2a-url="www.sk-granite.dp.ua"
-	data-a2a-title="SK Granite"
-></div>;
+import './footerComponent.scss';
 
 function FooterComponent() {
 	return (
@@ -14,7 +9,7 @@ function FooterComponent() {
 				<div className="footerComponent-head">
 					<div className="footerComponent-head-box">
 						<div className="footerComponent-title">Поділитись</div>
-						<div
+						{/* 						<div
 							className="footerComponent-social-box a2a_kit a2a_kit_size_32 a2a_default_style"
 							data-a2a-url="www.sk-granite.dp.ua"
 							data-a2a-title="Виготовлення пам'ятників м. Дніпро"
@@ -25,7 +20,7 @@ function FooterComponent() {
 							<a className="a2a_button_google_gmail"></a>
 							<a className="a2a_button_viber "></a>
 							<a className="a2a_button_whatsapp"></a>
-						</div>
+						</div> */}
 					</div>
 				</div>
 				<div className="footerComponent-footer">

@@ -1,6 +1,4 @@
 import TitleComponent from '../../titleComponent/TitleComponent';
-import SectionImageComponent from '../../sectionImageComponent/SectionImageComponent';
-import TitleImageComponent from '../../titleImageComponent/TitleImageComponent';
 import SubtitleComponent from '../../subtitleComponent/SubtitleComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
 import img_0 from '../../../assets/headImages/main.png';
@@ -10,6 +8,9 @@ import img_3 from '../../../assets/main/3.png';
 import img_4 from '../../../assets/main/4.png';
 import img_5 from '../../../assets/main/5.png';
 import img_6 from '../../../assets/main/6.png';
+import { lazy, Suspense } from 'react';
+import SpinerComponent from '../../spinerComponent/SpinerComponent';
+
 import './mainPage.scss';
 const texts = [
 	"Встановлення надгробка в місці упокою людини – спосіб висловити йому свою відданість, віддати шану. Не обов'язково вибирати найдорожчий, адже установка навіть скромного гранітного надгробка, яка демонструє ваше щире бажання увічнити пам'ять про близьку людину, що вже пішла, вже коштує багато чого. Так виявляється ваша любов до нього.",
@@ -18,12 +19,18 @@ const texts = [
 	"	Який би варіант ви не вибрали, працюючи над пам'ятником для вашої близької людини, ми	врахуємо всі ваші побажання. Ми гарантуємо максимально уважний підхід, тому що	повністю усвідомлюємо важливість пам'ятника для вас і свою відповідальність за	результат роботи.",
 ];
 
+const SectionImageComponent = lazy(() =>
+	import('../../sectionImageComponent/SectionImageComponent')
+);
+const TitleImageComponent = lazy(() => import('../../titleImageComponent/TitleImageComponent'));
 function MainPage() {
 	return (
 		<section className="mainPage">
 			<div className="mainPage-wrapper">
 				<TitleComponent title="Пам’ятники з граніту м. Дніпро" />
-				<TitleImageComponent img={img_0} />
+				<Suspense fallback={<SpinerComponent />}>
+					<TitleImageComponent img={img_0} />
+				</Suspense>
 				<SubtitleComponent subtitle="Що ми пропонуємо" />
 				<TextBoxComponent text={texts[0]} />
 				<div className="col-wrapper">
@@ -31,16 +38,16 @@ function MainPage() {
 					<SectionImageComponent img={img_2} />
 				</div>
 				<TextBoxComponent text={texts[1]} />
+				<SectionImageComponent img={img_5} />
 				<div className="col-wrapper">
+					<TextBoxComponent text={texts[2]} />
 					<SectionImageComponent img={img_3} />
+				</div>
+				<div className="col-wrapper">
 					<SectionImageComponent img={img_4} />
+					<TextBoxComponent text={texts[3]} />
 				</div>
-				<TextBoxComponent text={texts[2]} />
-				<div className="row-wrapper">
-					<SectionImageComponent img={img_5} />
-					<SectionImageComponent img={img_6} />
-				</div>
-				<TextBoxComponent text={texts[3]} />
+				<SectionImageComponent img={img_6} />
 			</div>
 		</section>
 	);

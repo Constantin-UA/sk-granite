@@ -1,15 +1,14 @@
 import TitleComponent from '../../titleComponent/TitleComponent';
-import SectionImageComponent from '../../sectionImageComponent/SectionImageComponent';
 import SubtitleComponent from '../../subtitleComponent/SubtitleComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
-import TitleImageComponent from '../../titleImageComponent/TitleImageComponent';
 import PhotosetComponent from '../../photosetComponent/PhotosetComponent';
-
 import img_0 from '../../../assets/headImages/services.png';
 import img_1 from '../../../assets/servicePage/1.png';
 import img_2 from '../../../assets/servicePage/2.png';
 import img_3 from '../../../assets/servicePage/3.png';
 import img_4 from '../../../assets/servicePage/4.png';
+import { lazy, Suspense } from 'react';
+import SpinerComponent from '../../spinerComponent/SpinerComponent';
 import './servicesPage.scss';
 const texts = [
 	"Для виготовлення пам'ятників ми використовуємо натуральний граніт та мармур. Ви можете замовити вироби з більш ніж десяти видів граніту, що відрізняються за відтінком та технічними характеристиками. Детальніше ознайомитися з кожним окремим видом ви можете зі статей на нашому сайті або за приватної консультації у нашого фахівця.",
@@ -17,26 +16,37 @@ const texts = [
 	'Написи на виробах виконуються з бронзових літер, шрифт та розмір яких вибирають самі замовники. Вони виглядають красиво і не псуються під впливом сонячних променів, опадів, перепадів температур та вологості. Протягом довгих років напис на камені залишатиметься чітким та яскравим.',
 	"Якщо ви вже визначилися з відповідним варіантом купівлі надгробка, для обговорення подробиць замовлення зв'яжіться з нашими фахівцями через сайт або за вказаним телефоном.",
 ];
-
+const SectionImageComponent = lazy(() =>
+	import('../../sectionImageComponent/SectionImageComponent')
+);
+const TitleImageComponent = lazy(() => import('../../titleImageComponent/TitleImageComponent'));
 function ServicesPage() {
 	return (
 		<section className="servicesPage">
 			<div className="servicesPage-wrapper">
 				<TitleComponent title="Послуги" />
-				<TitleImageComponent img={img_0} />
+				<Suspense fallback={<SpinerComponent />}>
+					<TitleImageComponent img={img_0} />
+				</Suspense>
 				<SubtitleComponent subtitle="Про пам'ятки з нашої майстерні" />
 				<TextBoxComponent text={texts[0]} />
 				<div className="col-wrapper">
-					<SectionImageComponent img={img_1} />
-					<SectionImageComponent img={img_2} />
+					<Suspense fallback={<SpinerComponent />}>
+						<SectionImageComponent img={img_1} />
+						<SectionImageComponent img={img_2} />
+					</Suspense>
 				</div>
 				<TextBoxComponent text={texts[1]} />
 				<div className="row-wrapper">
-					<SectionImageComponent img={img_3} />
-					<SectionImageComponent img={img_4} />
+					<Suspense fallback={<SpinerComponent />}>
+						<SectionImageComponent img={img_3} />
+						<SectionImageComponent img={img_4} />
+					</Suspense>
 				</div>
 				<TextBoxComponent text={texts[2]} />
-				<PhotosetComponent />
+				<Suspense fallback={<SpinerComponent />}>
+					<PhotosetComponent />
+				</Suspense>
 				<TextBoxComponent text={texts[3]} />
 			</div>
 		</section>

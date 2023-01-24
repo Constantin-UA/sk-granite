@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Transition } from 'react-transition-group';
-
+import { useRef } from 'react';
 import './menuComponent.scss';
 function MenuComponent({ onClose, show, setShowCros }) {
 	const btns = ['Головна', 'Про нас', 'Послуги', 'Контакти', 'Відгуки'];
-	const refs = ['/', 'пронас', 'послуги', 'контакти', 'відгуки'];
+	const refs = ['/', '/about', '/service', '/contact', '/review'];
 	const duration = 300;
 	const defaultStyle = {
 		transition: `all ${duration}ms ease`,
@@ -18,8 +18,10 @@ function MenuComponent({ onClose, show, setShowCros }) {
 		exiting: { opacity: 0, visibility: 'hidden' },
 		exited: { opacity: 0, visibility: 'hidden' },
 	};
+	const nodeRef = useRef(null);
 	return (
 		<Transition
+			nodeRef={nodeRef}
 			in={show}
 			timeout={duration}
 			mountOnEnter
@@ -31,6 +33,7 @@ function MenuComponent({ onClose, show, setShowCros }) {
 				<ul
 					id="menuList"
 					className="menuComponent"
+					ref={nodeRef}
 					style={{
 						...defaultStyle,
 						...transitionStyles[state],
