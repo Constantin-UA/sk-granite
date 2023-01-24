@@ -9,7 +9,9 @@ function ContactComponent() {
 			<div className="contact-box-subtitle">
 				<p>м. Дніпро</p>
 				<p>п. Мануйловський 18б</p>
-				<p>т. +380682917817</p>
+				<p>
+					<a href="tel:+380682917817">т. +380682917817</a>
+				</p>
 			</div>
 			<div className="contact-box-title">Електрона адреса</div>
 			<div className="contact-box-subtitle">sk_granite@ukr.net</div>

@@ -2,6 +2,7 @@ import TitleComponent from '../../titleComponent/TitleComponent';
 import SectionImageComponent from '../../sectionImageComponent/SectionImageComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
 import ContactComponent from '../../contactComponent/ContactComponent';
+import TitleImageComponent from '../../titleImageComponent/TitleImageComponent';
 import img_0 from '../../../assets/headImages/contacts.png';
 import img_1 from '../../../assets/contacts/1.png';
 import img_2 from '../../../assets/contacts/2.png';
@@ -15,7 +16,8 @@ function ContactPage() {
 		<section className="contactPage">
 			<div className="contactPage-wrapper">
 				<TitleComponent title="Контакти" />
-				<SectionImageComponent img={img_0} />
+				<TitleImageComponent img={img_0} />
+
 				<ContactComponent />
 				<div className="col-wrapper">
 					<SectionImageComponent img={img_1} />

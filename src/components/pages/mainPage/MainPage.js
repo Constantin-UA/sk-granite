@@ -1,5 +1,6 @@
 import TitleComponent from '../../titleComponent/TitleComponent';
 import SectionImageComponent from '../../sectionImageComponent/SectionImageComponent';
+import TitleImageComponent from '../../titleImageComponent/TitleImageComponent';
 import SubtitleComponent from '../../subtitleComponent/SubtitleComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
 import img_0 from '../../../assets/headImages/main.png';
@@ -22,7 +23,7 @@ function MainPage() {
 		<section className="mainPage">
 			<div className="mainPage-wrapper">
 				<TitleComponent title="Пам’ятники з граніту м. Дніпро" />
-				<SectionImageComponent img={img_0} />
+				<TitleImageComponent img={img_0} />
 				<SubtitleComponent subtitle="Що ми пропонуємо" />
 				<TextBoxComponent text={texts[0]} />
 				<div className="col-wrapper">

@@ -5,6 +5,7 @@
 	align-items: center;
 	padding: 0px;
 	background-color: $header-color;
+	transition: all 0.5s ease-in-out;
 	&-wrapper {
 		background-color: $header-color;
 		width: 100%;
@@ -12,14 +13,14 @@
 		height: fit-content;
 		flex-direction: column;
 		align-items: center;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		gap: 15px;
+		padding-top: 16px;
+		gap: 16px;
 	}
 	&-box {
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
+		padding-bottom: 16px;
 	}
 	&-logo {
 		width: 300px;
@@ -39,6 +40,9 @@
 			font-weight: 400;
 			font-size: 22px;
 			color: #e1ba87;
+			a {
+				color: #e1ba87;
+			}
 		}
 	}
 	&-menu-open {
@@ -72,6 +76,8 @@
 		}
 		&-box {
 			flex-direction: row;
+			padding-bottom: 0px;
+			align-items: center;
 		}
 		&-menu-open {
 			display: none;
@@ -91,7 +97,7 @@
 			text-align: start;
 			width: fit-content;
 			p {
-				font-size: 18px;
+				font-size: 16px;
 			}
 		}
 	}

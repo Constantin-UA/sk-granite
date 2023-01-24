@@ -1,32 +1,35 @@
 @import '../../style/variables';
 .sectionImage {
-	width: fit-content;
-	height: fit-content;
-	max-height: 620px;
-	overflow: hidden;
+	width: 100%;
+	height: 100%;
 	border-radius: 0.5rem;
 	box-shadow: 0px 0px 5px $text-shadow-logo-color;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	object-fit: contain;
-	img {
+	overflow: hidden;
+	position: relative;
+	&-img {
 		width: 100%;
 		height: 100%;
+		object-fit: cover;
 	}
 }
+.col-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-content: center;
+	gap: 32px;
+}
+.row-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 32px;
+}
+
 @media (max-width: 768px) {
-	.sectionImage {
-		width: 100%;
+	.col-wrapper {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
 	}
 }
-/* @media (max-width: 375px) {
-	.sectionImage {
-		width: 360px;
-	}
-}
-@media (max-width: 320px) {
-	.sectionImage {
-		width: 320px;
-	}
-} */

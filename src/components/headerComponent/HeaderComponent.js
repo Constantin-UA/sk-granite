@@ -1,11 +1,23 @@
 import MenuComponent from '../menuComponent/MenuComponent';
 import logo from '../../assets/header/Logo.png';
 import menu from '../../assets/header/btn.svg';
+import cros from '../../assets/header/cros.svg';
 import './headerComponent.scss';
+import { useState } from 'react';
+import { useEffect } from 'react';
 function HeaderComponent() {
-	const showMenu = () => {
-		document.getElementById('menuList').classList.toggle('show');
-	};
+	const [showMenu, setShowMenu] = useState(false);
+	const [showCros, setShowCros] = useState(false);
+	const [width, setWidth] = useState(0);
+	useEffect(() => {
+		setWidth(document.querySelector('.headerComponent').clientWidth);
+	}, []);
+	useEffect(() => {
+		if (width > 768) {
+			setShowMenu(true);
+		}
+	}, [width]);
+
 	return (
 		<section className="headerComponent">
 			<div className="headerComponent-wrapper">
@@ -17,13 +29,15 @@ function HeaderComponent() {
 						<p>Наша адреса:</p>
 						<p>м. Дніпро</p>
 						<p>п. Мануйловський 18б</p>
-						<p>т. +380682917817</p>
+						<p>
+							<a href="tel:+380682917817">т. +380682917817</a>
+						</p>
 					</div>
 				</div>
-				<MenuComponent />
+				<MenuComponent onClose={setShowMenu} setShowCros={setShowCros} show={showMenu} />
 			</div>
-			<div className="headerComponent-menu-open" onClick={() => showMenu()}>
-				<img src={menu} alt="button open menu" />
+			<div className="headerComponent-menu-open" onClick={() => setShowMenu(!showMenu)}>
+				<img src={showCros ? cros : menu} alt="button open menu" />
 			</div>
 		</section>
 	);

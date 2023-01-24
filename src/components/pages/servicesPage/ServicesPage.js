@@ -2,13 +2,14 @@ import TitleComponent from '../../titleComponent/TitleComponent';
 import SectionImageComponent from '../../sectionImageComponent/SectionImageComponent';
 import SubtitleComponent from '../../subtitleComponent/SubtitleComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
+import TitleImageComponent from '../../titleImageComponent/TitleImageComponent';
+import PhotosetComponent from '../../photosetComponent/PhotosetComponent';
+
 import img_0 from '../../../assets/headImages/services.png';
 import img_1 from '../../../assets/servicePage/1.png';
 import img_2 from '../../../assets/servicePage/2.png';
 import img_3 from '../../../assets/servicePage/3.png';
 import img_4 from '../../../assets/servicePage/4.png';
-import img_5 from '../../../assets/servicePage/5.png';
-import img_6 from '../../../assets/servicePage/6.png';
 import './servicesPage.scss';
 const texts = [
 	"Для виготовлення пам'ятників ми використовуємо натуральний граніт та мармур. Ви можете замовити вироби з більш ніж десяти видів граніту, що відрізняються за відтінком та технічними характеристиками. Детальніше ознайомитися з кожним окремим видом ви можете зі статей на нашому сайті або за приватної консультації у нашого фахівця.",
@@ -22,7 +23,7 @@ function ServicesPage() {
 		<section className="servicesPage">
 			<div className="servicesPage-wrapper">
 				<TitleComponent title="Послуги" />
-				<SectionImageComponent img={img_0} />
+				<TitleImageComponent img={img_0} />
 				<SubtitleComponent subtitle="Про пам'ятки з нашої майстерні" />
 				<TextBoxComponent text={texts[0]} />
 				<div className="col-wrapper">
@@ -35,10 +36,7 @@ function ServicesPage() {
 					<SectionImageComponent img={img_4} />
 				</div>
 				<TextBoxComponent text={texts[2]} />
-				<div className="col-wrapper">
-					<SectionImageComponent img={img_5} />
-					<SectionImageComponent img={img_6} />
-				</div>
+				<PhotosetComponent />
 				<TextBoxComponent text={texts[3]} />
 			</div>
 		</section>

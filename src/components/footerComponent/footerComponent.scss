@@ -24,10 +24,17 @@
 		align-items: center;
 		padding: 16px 0px;
 		gap: 16px;
+		&-box {
+			display: flex;
+			flex-direction: column;
+			padding: 0px 32px;
+			width: 100%;
+			max-width: 1366px;
+		}
 	}
 	&-title {
-		font-weight: 500;
-		font-size: 26px;
+		font-weight: 600;
+		font-size: 32px;
 		display: flex;
 		align-self: center;
 		color: $header-color;
@@ -37,14 +44,12 @@
 		background: $header-color;
 		box-shadow: 0px 0px 5px $text-shadow-logo-color;
 		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
+		justify-content: space-evenly;
+		width: 100%;
 		padding: 16px;
-		gap: 16px;
 		border-radius: 12px;
 	}
-	&-social-icon {
+	/* 	&-social-icon {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -52,7 +57,7 @@
 		background: $header-color;
 		box-shadow: 0px 0px 5px $text-shadow-logo-color;
 		border-radius: 12px;
-	}
+	} */
 	&-footer {
 		display: flex;
 		width: 100%;
@@ -60,16 +65,23 @@
 		align-items: center;
 		padding: 0px;
 		gap: 16px;
-		background: $text-shadow-logo-color;
+		background: #1e1e1e;
+		&-wrapper {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			background: $header-color;
+		}
 	}
 	&-footer-box {
+		max-width: 1366px;
 		display: flex;
 		position: relative;
 		width: 100%;
 		flex-direction: column;
 		align-items: center;
 		margin: 0;
-		padding: 16px 0px;
+		padding: 32px 32px;
 		gap: 32px;
 		background: $header-color;
 		list-style-type: none;
@@ -100,6 +112,13 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			padding: 32px;
+			&-box {
+				row-gap: 32px;
+			}
+		}
+		&-title {
+			align-self: flex-start;
 		}
 		&-footer {
 			display: flex;
@@ -110,17 +129,16 @@
 			&-box {
 				display: flex;
 				flex-direction: column;
-				align-items: center;
-				padding-top: 16px;
-				padding-bottom: 16px;
-				gap: 10px;
+				align-items: stretch;
+				padding: 32px;
+				gap: 32px;
 				&-component {
-					width: 768px;
+					width: 100%;
 					display: flex;
 					flex-direction: row;
 					text-align: center;
 					padding: 0;
-					gap: 10px;
+					gap: 12px;
 				}
 			}
 		}

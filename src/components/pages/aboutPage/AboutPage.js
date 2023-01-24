@@ -1,6 +1,7 @@
 import TitleComponent from '../../titleComponent/TitleComponent';
 import SectionImageComponent from '../../sectionImageComponent/SectionImageComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
+import TitleImageComponent from '../../titleImageComponent/TitleImageComponent';
 import img_0 from '../../../assets/headImages/about.png';
 import img_1 from '../../../assets/about/1.png';
 import img_2 from '../../../assets/about/2.png';
@@ -21,7 +22,8 @@ function aboutPage() {
 		<section className="aboutPage">
 			<div className="aboutPage-wrapper">
 				<TitleComponent title="Про нас" />
-				<SectionImageComponent img={img_0} />
+				<TitleImageComponent img={img_0} />
+
 				<TextBoxComponent text={texts[0]} />
 				<div className="col-wrapper">
 					<SectionImageComponent img={img_1} />

@@ -1,8 +1,13 @@
 @import '../../style/variables';
 
 .title {
-	font-size: $title-size;
+	font-size: 32px;
 	font-weight: bold;
 	color: $text-shadow-logo-color;
 	text-align: center;
+}
+@media (min-width: 769px) {
+	.title {
+		font-size: 32px;
+	}
 }

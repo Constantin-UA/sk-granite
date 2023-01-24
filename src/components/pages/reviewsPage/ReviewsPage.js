@@ -2,6 +2,7 @@ import TitleComponent from '../../titleComponent/TitleComponent';
 import SectionImageComponent from '../../sectionImageComponent/SectionImageComponent';
 import SubtitleComponent from '../../subtitleComponent/SubtitleComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
+import TitleImageComponent from '../../titleImageComponent/TitleImageComponent';
 import img_0 from '../../../assets/headImages/reviews.png';
 import img_1 from '../../../assets/reviewsPage/1.png';
 import img_2 from '../../../assets/reviewsPage/2.png';
@@ -19,7 +20,8 @@ function ReviewsPage() {
 		<section className="reviewsPage">
 			<div className="reviewsPage-wrapper">
 				<TitleComponent title="Відгуки" />
-				<SectionImageComponent img={img_0} />
+				<TitleImageComponent img={img_0} />
+
 				<TextBoxComponent text={texts[0]} />
 				<SubtitleComponent subtitle="Від Світлана" />
 				<SectionImageComponent img={img_1} />
