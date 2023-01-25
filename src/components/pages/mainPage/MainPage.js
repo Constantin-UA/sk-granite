@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import TitleComponent from '../../titleComponent/TitleComponent';
 import SubtitleComponent from '../../subtitleComponent/SubtitleComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
@@ -26,6 +27,36 @@ const TitleImageComponent = lazy(() => import('../../titleImageComponent/TitleIm
 function MainPage() {
 	return (
 		<section className="mainPage">
+			<Helmet>
+				<title>Виготовлення пам'ятників з мармуру та граніту у Дніпрі.</title>
+				<meta name="title" content="Виготовлення пам'ятників з мармуру та граніту у Дніпрі." />
+				<meta
+					name="description"
+					content="Замовити гранітний пам'ятник в Дніпропетровській області, а також по всій Україні."
+				/>
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content="http://sk-granite.dp.ua/" />
+				<meta
+					property="og:title"
+					content="Виготовлення пам'ятників з мармуру та граніту у Дніпрі."
+				/>
+				<meta
+					property="og:description"
+					content="Замовити гранітний пам'ятник в Дніпропетровській області, а також по всій Україні."
+				/>
+				<meta property="og:image" content="%PUBLIC_URL%/faviconImg.png" />
+				<meta property="twitter:card" content="summary_large_image" />
+				<meta property="twitter:url" content="http://sk-granite.dp.ua/" />
+				<meta
+					property="twitter:title"
+					content="Виготовлення пам'ятників з мармуру та граніту у Дніпрі."
+				/>
+				<meta
+					property="twitter:description"
+					content="Замовити гранітний пам'ятник в Дніпропетровській області, а також по всій Україні."
+				/>
+				<meta property="twitter:image" content="%PUBLIC_URL%/faviconImg.png" />
+			</Helmet>
 			<div className="mainPage-wrapper">
 				<TitleComponent title="Пам’ятники з граніту м. Дніпро" />
 				<Suspense fallback={<SpinerComponent />}>
@@ -34,8 +65,12 @@ function MainPage() {
 				<SubtitleComponent subtitle="Що ми пропонуємо" />
 				<TextBoxComponent text={texts[0]} />
 				<div className="col-wrapper">
-					<SectionImageComponent img={img_1} />
-					<SectionImageComponent img={img_2} />
+					<Suspense fallback={<SpinerComponent />}>
+						<SectionImageComponent img={img_1} />
+					</Suspense>
+					<Suspense fallback={<SpinerComponent />}>
+						<SectionImageComponent img={img_2} />
+					</Suspense>
 				</div>
 				<TextBoxComponent text={texts[1]} />
 				<SectionImageComponent img={img_5} />

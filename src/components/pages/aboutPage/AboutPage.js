@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import TitleComponent from '../../titleComponent/TitleComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
 
@@ -24,6 +25,9 @@ const TitleImageComponent = lazy(() => import('../../titleImageComponent/TitleIm
 function aboutPage() {
 	return (
 		<section className="aboutPage">
+			<Helmet>
+				<title>SK Granite - about</title>
+			</Helmet>
 			<div className="aboutPage-wrapper">
 				<TitleComponent title="Про нас" />
 				<Suspense fallback={<SpinerComponent />}>

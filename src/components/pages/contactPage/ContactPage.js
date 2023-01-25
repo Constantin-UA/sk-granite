@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import TitleComponent from '../../titleComponent/TitleComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
 import ContactComponent from '../../contactComponent/ContactComponent';
@@ -17,12 +18,14 @@ const TitleImageComponent = lazy(() => import('../../titleImageComponent/TitleIm
 function ContactPage() {
 	return (
 		<section className="contactPage">
+			<Helmet>
+				<title>SK Granite - contacts</title>
+			</Helmet>
 			<div className="contactPage-wrapper">
 				<TitleComponent title="Контакти" />
 				<Suspense fallback={<SpinerComponent />}>
 					<TitleImageComponent img={img_0} />
 				</Suspense>
-
 				<ContactComponent />
 				<TextBoxComponent text={texts[0]} />
 				<div className="col-wrapper">

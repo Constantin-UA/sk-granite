@@ -5,6 +5,7 @@ import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
 import img_0 from '../../../assets/headImages/reviews.png';
 import img_1 from '../../../assets/reviewsPage/1.png';
 import img_2 from '../../../assets/reviewsPage/2.png';
+import { Helmet } from 'react-helmet';
 import img_3 from '../../../assets/reviewsPage/3.png';
 import { lazy, Suspense } from 'react';
 import SpinerComponent from '../../spinerComponent/SpinerComponent';
@@ -22,6 +23,9 @@ const TitleImageComponent = lazy(() => import('../../titleImageComponent/TitleIm
 function ReviewsPage() {
 	return (
 		<section className="reviewsPage">
+			<Helmet>
+				<title>SK Granite - review</title>
+			</Helmet>
 			<div className="reviewsPage-wrapper">
 				<TitleComponent title="Відгуки" />
 				<Suspense fallback={<SpinerComponent />}>

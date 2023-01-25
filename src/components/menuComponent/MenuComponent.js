@@ -1,10 +1,30 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Transition } from 'react-transition-group';
 import { useRef } from 'react';
 import './menuComponent.scss';
 function MenuComponent({ onClose, show, setShowCros }) {
-	const btns = ['Головна', 'Про нас', 'Послуги', 'Контакти', 'Відгуки'];
-	const refs = ['/', '/about', '/service', '/contact', '/review'];
+	const btns = [
+		{
+			name: 'Головна',
+			path: '/',
+		},
+		{
+			name: 'Про нас',
+			path: '/about',
+		},
+		{
+			name: 'Послуги',
+			path: '/service',
+		},
+		{
+			name: 'Контакти',
+			path: '/contact',
+		},
+		{
+			name: 'Відгуки',
+			path: '/review',
+		},
+	];
 	const duration = 300;
 	const defaultStyle = {
 		transition: `all ${duration}ms ease`,
@@ -19,6 +39,9 @@ function MenuComponent({ onClose, show, setShowCros }) {
 		exited: { opacity: 0, visibility: 'hidden' },
 	};
 	const nodeRef = useRef(null);
+	let activeStyle = {
+		textDecoration: 'underline',
+	};
 	return (
 		<Transition
 			nodeRef={nodeRef}
@@ -38,17 +61,18 @@ function MenuComponent({ onClose, show, setShowCros }) {
 						...defaultStyle,
 						...transitionStyles[state],
 					}}
+					onClick={() => onClose(false)}
 				>
 					{btns.map((item, idx) => {
 						return (
 							<li key={idx} className="menuComponent-item">
-								<Link
+								<NavLink
 									className="menuComponent-item-link"
-									to={refs[idx]}
-									onClick={() => onClose(false)}
+									to={item.path}
+									style={({ isActive }) => (isActive ? activeStyle : undefined)}
 								>
-									{item}
-								</Link>
+									{item.name}
+								</NavLink>
 							</li>
 						);
 					})}

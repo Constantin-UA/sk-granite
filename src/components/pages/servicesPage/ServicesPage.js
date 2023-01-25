@@ -5,6 +5,7 @@ import PhotosetComponent from '../../photosetComponent/PhotosetComponent';
 import img_0 from '../../../assets/headImages/services.png';
 import img_1 from '../../../assets/servicePage/1.png';
 import img_2 from '../../../assets/servicePage/2.png';
+import { Helmet } from 'react-helmet';
 import img_3 from '../../../assets/servicePage/3.png';
 import img_4 from '../../../assets/servicePage/4.png';
 import { lazy, Suspense } from 'react';
@@ -23,6 +24,9 @@ const TitleImageComponent = lazy(() => import('../../titleImageComponent/TitleIm
 function ServicesPage() {
 	return (
 		<section className="servicesPage">
+			<Helmet>
+				<title>SK Granite - service</title>
+			</Helmet>
 			<div className="servicesPage-wrapper">
 				<TitleComponent title="Послуги" />
 				<Suspense fallback={<SpinerComponent />}>
