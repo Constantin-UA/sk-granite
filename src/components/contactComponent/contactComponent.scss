@@ -11,20 +11,20 @@
 	box-shadow: 0px 0px 5px $text-shadow-logo-color;
 	border-radius: 0.5rem;
 	&-title {
-		font-weight: 500;
-		font-size: $subtitle-size;
+		font-weight: bold;
+		font-size: 32px;
 		display: flex;
 		align-items: center;
 		color: $text-shadow-logo-color;
 		text-shadow: 1px 1px 2px #b3afa6;
 	}
 	&-subtitle {
-		font-size: $text-size;
-		color: $text-shadow-logo-color;
+		font-size: 28px;
+		color: $gold-text-color;
 		text-align: center;
 		text-shadow: 1px 1px 2px #b3afa6;
 		a {
-			color: $text-shadow-logo-color;
+			color: $gold-text-color;
 		}
 	}
 	&-social-box {

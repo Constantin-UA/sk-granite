@@ -28,7 +28,7 @@ function HeaderComponent() {
 					<div className="headerComponent-addres-text">
 						<p>Наша адреса:</p>
 						<p>м. Дніпро</p>
-						<p>п. Мануйловський 18б</p>
+						<p>пр. Мануйлівський, 18 Б</p>
 						<p>
 							<a href="tel:+380682917817">т. +380682917817</a>
 						</p>

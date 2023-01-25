@@ -5,3 +5,8 @@
 	color: $text-shadow-logo-color;
 	text-align: center;
 }
+@media (min-width: 769px) {
+	.subtitle {
+		font-size: 32px;
+	}
+}
