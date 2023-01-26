@@ -3,8 +3,8 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import './mapComponent.scss';
 
 function MapComponent() {
-	const position = [48.504201, 34.998751];
-	const zoom = 15;
+	const position = [48.491643, 35.042726];
+	const zoom = 13;
 	return (
 		<MapContainer
 			zoom={zoom}
