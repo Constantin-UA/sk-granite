@@ -1,12 +1,13 @@
 @import '../../style/variables';
 .subtitle {
 	font-weight: bold;
-	font-size: 28px;
+	font-size: $subtitle-size-mobile;
 	color: $text-shadow-logo-color;
 	text-align: center;
+	text-decoration: overline;
 }
 @media (min-width: 769px) {
 	.subtitle {
-		font-size: 32px;
+		font-size: $subtitle-size-desktop;
 	}
 }

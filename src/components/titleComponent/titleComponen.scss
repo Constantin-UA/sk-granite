@@ -1,13 +1,13 @@
 @import '../../style/variables';
 
 .title {
-	font-size: 32px;
+	font-size: $title-size-mobile;
 	font-weight: bold;
-	color: $gold-text-color;
+	color: red;
 	text-align: center;
 }
 @media (min-width: 769px) {
 	.title {
-		font-size: 46px;
+		font-size: $title-size-desktop;
 	}
 }

@@ -20,10 +20,6 @@ function MenuComponent({ onClose, show, setShowCros }) {
 			name: 'Контакти',
 			path: '/contact',
 		},
-		{
-			name: 'Відгуки',
-			path: '/review',
-		},
 	];
 	const duration = 300;
 	const defaultStyle = {

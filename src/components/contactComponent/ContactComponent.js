@@ -1,14 +1,19 @@
-import insta from '../../assets/contacts/instagram.png';
+import { useState } from 'react';
+import MapDialog from '../mapDialog/MapDialog';
 import face from '../../assets/contacts/facebook.png';
-
+import insta from '../../assets/contacts/instagram.png';
 import './contactComponent.scss';
 function ContactComponent() {
+	const [modalActive, setModalActive] = useState(false);
+
 	return (
 		<div className="contact-box">
 			<div className="contact-box-title">Головний офіс</div>
 			<div className="contact-box-subtitle">
 				<p>м. Дніпро</p>
-				<p>пр. Мануйлівський, 18 Б</p>
+				<p className="contact-adres-btn" onClick={() => setModalActive(true)}>
+					пр. Мануйлівський, 18 Б
+				</p>
 				<p>
 					<a href="tel:+380682917817">т. +380682917817</a>
 				</p>
@@ -24,6 +29,7 @@ function ContactComponent() {
 					<img src={face} alt="facebook" />
 				</div>
 			</div>
+			<MapDialog active={modalActive} setActive={setModalActive} />
 		</div>
 	);
 }

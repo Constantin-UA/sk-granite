@@ -16,8 +16,8 @@ const routes = [
 	{ path: '/about', name: 'About', element: <AboutPage /> },
 	{ path: '/service', name: 'Service', element: <ServicesPage /> },
 	{ path: '/contact', name: 'Contact', element: <ContactPage /> },
-	{ path: '/review', name: 'Review', element: <ReviewsPage /> },
 ];
+/* { path: '/review', name: 'Review', element: <ReviewsPage /> }, */
 function App() {
 	return (
 		<Router>
