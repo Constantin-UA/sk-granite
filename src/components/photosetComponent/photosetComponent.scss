@@ -4,7 +4,7 @@
 	position: relative;
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: stretch;
 	gap: 4px;
 
 	&-grid {
@@ -15,6 +15,7 @@
 		gap: 4px;
 	}
 	&-grid-item {
+		height: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;

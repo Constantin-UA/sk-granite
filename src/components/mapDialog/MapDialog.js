@@ -1,18 +1,14 @@
-import cros from '../../assets/header/cros.png';
-import map from '../../assets/about/1.png';
+import MapComponent from '../mapComponent/MapComponent';
+import cros from '../../assets/contacts/cros.png';
 import './mapDialog.scss';
-function MapDialog({ active, setActive }) {
+function MapDialog({ mapDialogShow, setActive }) {
+	const onClick = () => {
+		setActive(false);
+	};
 	return (
-		<div className={active ? 'mapDialog mapDialog-active' : 'mapDialog'}>
-			<img
-				src={cros}
-				alt="close button"
-				className="mapDialog-close"
-				onClick={() => setActive(false)}
-			/>
-			<div className={active ? 'mapDialog-body mapDialog-body-active' : 'mapDialog-body'}>
-				<img src={map} alt="Big photoShow" className="mapDialog-map" />
-			</div>
+		<div className={mapDialogShow ? 'mapDialog mapDialog-active' : 'mapDialog'}>
+			<img src={cros} alt="close button" className="mapDialog-close" onClick={onClick} />
+			<div className="mapDialog-body">{mapDialogShow ? <MapComponent /> : null}</div>
 		</div>
 	);
 }

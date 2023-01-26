@@ -1,0 +1,15 @@
+@import url('~leaflet/dist/leaflet.css');
+/* 
+body,
+#root, */
+.leaflet-container {
+	width: 100%;
+	height: 100% !important;
+}
+.mapComponent-map {
+	max-width: 100%;
+	max-height: 100%;
+}
+.leaflet-control-attribution {
+	//visibility: hidden;
+}

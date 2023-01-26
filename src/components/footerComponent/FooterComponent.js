@@ -1,4 +1,8 @@
 import logo from '../../assets/footer/logo.png';
+import telegram from '../../assets/footer/telegram.png';
+import twitter from '../../assets/footer/twitter.png';
+import viber from '../../assets/footer/viber.png';
+import whatsapp from '../../assets/footer/whatsapp.png';
 
 import './footerComponent.scss';
 
@@ -9,18 +13,32 @@ function FooterComponent() {
 				<div className="footerComponent-head">
 					<div className="footerComponent-head-box">
 						<div className="footerComponent-title">Поділитись</div>
-						{/* 						<div
-							className="footerComponent-social-box a2a_kit a2a_kit_size_32 a2a_default_style"
-							data-a2a-url="www.sk-granite.dp.ua"
-							data-a2a-title="Виготовлення пам'ятників м. Дніпро"
-						>
-							<a className="a2a_button_facebook"></a>
-							<a className="a2a_button_twitter"></a>
-							<a className="a2a_button_telegram"></a>
-							<a className="a2a_button_google_gmail"></a>
-							<a className="a2a_button_viber "></a>
-							<a className="a2a_button_whatsapp"></a>
-						</div> */}
+						<div className="footerComponent-social-box">
+							<a href="https://telegram.me/share/url?url=http://sk-granite.dp.ua&amp;text=SK Granite Виготовлення пам'ятників із граніту та мармуру.">
+								<img
+									className="footerComponent-telegram"
+									src={telegram}
+									alt="telegram share button icon"
+								/>
+							</a>
+							<a href="viber://forward?text=Виготовлення пам'ятників із граніту та мармуру sk-granite.dp.ua">
+								<img className="footerComponent-viber" src={viber} alt="viber share button icon" />
+							</a>
+							<a href="https://twitter.com/intent/tweet?text=Пам&#39;ятники за граніту та мармуру м. Дніпро sk-granite.dp.ua">
+								<img
+									className="footerComponent-twitter"
+									src={twitter}
+									alt="twitter share button icon"
+								/>
+							</a>
+							<a href="https://wa.me/?text=Пам&#39;ятники за граніту та мармуру м. Дніпро sk-granite.dp.ua">
+								<img
+									className="footerComponent-whatsapp"
+									src={whatsapp}
+									alt="whatsapp share button icon"
+								/>
+							</a>
+						</div>
 					</div>
 				</div>
 				<div className="footerComponent-footer">

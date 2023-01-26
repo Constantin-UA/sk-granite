@@ -1,0 +1,30 @@
+@import '../../style/variables';
+.adresContact {
+	text-align: center;
+	p {
+		font-weight: normal;
+		font-size: 22px;
+		color: #e1ba87;
+	}
+	&-adres {
+		cursor: pointer;
+		color: #e1ba87;
+	}
+	&-phone {
+		color: #e1ba87;
+	}
+}
+
+//media
+
+@media (min-width: 769px) {
+	.adresContact {
+		&-adres-text {
+			text-align: start;
+			width: fit-content;
+			p {
+				font-size: 16px;
+			}
+		}
+	}
+}

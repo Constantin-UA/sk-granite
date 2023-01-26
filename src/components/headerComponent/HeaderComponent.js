@@ -1,11 +1,11 @@
+import { useState, useEffect } from 'react';
 import MenuComponent from '../menuComponent/MenuComponent';
-import logo from '../../assets/header/Logo.png';
+import AdresContact from '../adresContact/AdresContact';
 import menu from '../../assets/header/btn.svg';
 import cros from '../../assets/header/cros.svg';
 import './headerComponent.scss';
-import { useState } from 'react';
-import { useEffect } from 'react';
-function HeaderComponent() {
+import logo from '../../assets/header/Logo.png';
+function HeaderComponent({ showMap }) {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showCros, setShowCros] = useState(false);
 	const [width, setWidth] = useState(0);
@@ -25,13 +25,9 @@ function HeaderComponent() {
 					<div className="headerComponent-logo">
 						<img src={logo} alt="Logotip SK granite" />
 					</div>
-					<div className="headerComponent-addres-text">
-						<p>Наша адреса:</p>
-						<p>м. Дніпро</p>
-						<p>пр. Мануйлівський, 18 Б</p>
-						<p>
-							<a href="tel:+380682917817">т. +380682917817</a>
-						</p>
+					<div className="headerComponent-adres">
+						<div className="headerComponent-adres-title">Наша адреса:</div>
+						<AdresContact showMap={showMap} />
 					</div>
 				</div>
 				<MenuComponent onClose={setShowMenu} setShowCros={setShowCros} show={showMenu} />

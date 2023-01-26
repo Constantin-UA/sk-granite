@@ -15,7 +15,7 @@ const SectionImageComponent = lazy(() =>
 	import('../../sectionImageComponent/SectionImageComponent')
 );
 const TitleImageComponent = lazy(() => import('../../titleImageComponent/TitleImageComponent'));
-function ContactPage() {
+function ContactPage({ showMap }) {
 	return (
 		<section className="contactPage">
 			<Helmet>
@@ -26,7 +26,7 @@ function ContactPage() {
 				<Suspense fallback={<SpinerComponent />}>
 					<TitleImageComponent img={img_0} />
 				</Suspense>
-				<ContactComponent />
+				<ContactComponent showMap={showMap} />
 				<TextBoxComponent text={texts[0]} />
 				<div className="col-wrapper">
 					<Suspense fallback={<SpinerComponent />}>

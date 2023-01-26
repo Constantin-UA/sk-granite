@@ -34,15 +34,15 @@
 			object-fit: cover;
 		}
 	}
-	&-addres-text {
-		text-align: center;
-		p {
-			font-weight: normal;
+	&-adres {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		&-title {
 			font-size: 22px;
-			color: #e1ba87;
-			a {
-				color: #e1ba87;
-			}
+			color: $gold-text-color;
+			font-weight: normal;
 		}
 	}
 	&-menu-open {
@@ -88,13 +88,6 @@
 			img {
 				width: 100%;
 				height: 100%;
-			}
-		}
-		&-addres-text {
-			text-align: start;
-			width: fit-content;
-			p {
-				font-size: 16px;
 			}
 		}
 	}
