@@ -14,8 +14,8 @@ function HeaderComponent({ showMap }) {
 		setWidth(document.querySelector('.headerComponent').clientWidth);
 	}, []);
 	useEffect(() => {
-		console.log(width);
-	}, [width]);
+		console.log(showMenu);
+	}, [showMenu]);
 	return (
 		<section className="headerComponent">
 			<div className="headerComponent-wrapper">
@@ -31,11 +31,7 @@ function HeaderComponent({ showMap }) {
 				{width > 768 ? (
 					<MenuHeader />
 				) : (
-					<MenuComponent
-						onClick={() => setShowMenu(!showMenu)}
-						setShowCros={setShowCros}
-						show={showMenu}
-					/>
+					<MenuComponent onClose={setShowMenu} setShowCros={setShowCros} show={showMenu} />
 				)}
 			</div>
 			<div className="headerComponent-menu-open" onClick={() => setShowMenu(!showMenu)}>

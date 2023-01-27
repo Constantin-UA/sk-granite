@@ -5,7 +5,7 @@
 	align-items: center;
 	padding: 0px;
 	background-color: $header-color;
-	transition: all 0.5s ease-in-out;
+	transition: 0.5s;
 	&-wrapper {
 		background-color: $header-color;
 		width: 100%;
@@ -15,6 +15,7 @@
 		align-items: center;
 		padding-top: 16px;
 		gap: 16px;
+		transition: 0.5s;
 	}
 	&-box {
 		display: flex;
@@ -41,6 +42,7 @@
 		justify-content: center;
 		&-title {
 			width: 100%;
+			text-align: center;
 			font-size: 22px;
 			color: $gold-text-color;
 			font-weight: normal;

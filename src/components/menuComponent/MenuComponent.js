@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { Transition } from 'react-transition-group';
 import { useRef } from 'react';
 import './menuComponent.scss';
-function MenuComponent({ show, setShowCros }) {
+function MenuComponent({ show, setShowCros, onClose }) {
 	const btns = [
 		{
 			name: 'Головна',
@@ -60,7 +60,7 @@ function MenuComponent({ show, setShowCros }) {
 				>
 					{btns.map((item, idx) => {
 						return (
-							<li key={idx} className="menuComponent-item">
+							<li key={idx} className="menuComponent-item" onClick={() => onClose(false)}>
 								<NavLink
 									className="menuComponent-item-link"
 									to={item.path}

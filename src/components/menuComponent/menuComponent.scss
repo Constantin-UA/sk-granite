@@ -11,6 +11,7 @@
 	background: transparent;
 	list-style-type: none;
 	margin: 0;
+	transition: 0.5s;
 	&-item {
 		display: flex;
 		flex-direction: row;

@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from 'react';
 import { useState } from 'react';
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SpinerComponent from '../spinerComponent/SpinerComponent';
 import HeaderComponent from '../headerComponent/HeaderComponent';
@@ -30,10 +29,10 @@ function App() {
 	return (
 		<Router>
 			<div className="app">
+				<header>
+					<HeaderComponent showMap={setMapDialogShow} />
+				</header>
 				<Suspense fallback={<SpinerComponent />}>
-					<header>
-						<HeaderComponent showMap={setMapDialogShow} />
-					</header>
 					<main>
 						<MapDialog mapDialogShow={mapDialogShow} setActive={setMapDialogShow} />
 						<Routes>
@@ -43,10 +42,10 @@ function App() {
 						</Routes>
 						<UpArrow />
 					</main>
-					<footer>
-						<FooterComponent />
-					</footer>
 				</Suspense>
+				<footer>
+					<FooterComponent />
+				</footer>
 			</div>
 		</Router>
 	);
