@@ -13,9 +13,7 @@ function HeaderComponent({ showMap }) {
 	useEffect(() => {
 		setWidth(document.querySelector('.headerComponent').clientWidth);
 	}, []);
-	useEffect(() => {
-		console.log(showMenu);
-	}, [showMenu]);
+
 	return (
 		<section className="headerComponent">
 			<div className="headerComponent-wrapper">
