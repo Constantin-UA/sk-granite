@@ -6,7 +6,7 @@ function ContactComponent({ showMap }) {
 	return (
 		<div className="contact-box">
 			<div className="contact-box-title">Головний офіс</div>
-			<AdresContact showMap={showMap} />
+			<AdresContact showMap={showMap} active={true} />
 			<div className="contact-box-title">Електрона адреса</div>
 			<div className="contact-box-subtitle">sk_granite@ukr.net</div>
 			<div className="contact-box-title">Соціальні мережі</div>

@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { Transition } from 'react-transition-group';
 import { useRef } from 'react';
 import './menuComponent.scss';
-function MenuComponent({ onClose, show, setShowCros }) {
+function MenuComponent({ show, setShowCros }) {
 	const btns = [
 		{
 			name: 'Головна',
@@ -57,7 +57,6 @@ function MenuComponent({ onClose, show, setShowCros }) {
 						...defaultStyle,
 						...transitionStyles[state],
 					}}
-					onClick={() => onClose(false)}
 				>
 					{btns.map((item, idx) => {
 						return (

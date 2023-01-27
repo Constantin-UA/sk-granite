@@ -1,5 +1,5 @@
 @import '../../style/variables';
-.menuComponent {
+.menuHeader {
 	width: 100%;
 	position: relative;
 	display: flex;
@@ -8,9 +8,16 @@
 	align-items: center;
 	padding: 15px 0px 15px 0px;
 	gap: 20px;
-	background: transparent;
+	background-color: $msg-bg-color;
 	list-style-type: none;
 	margin: 0;
+	///min-w769px
+	display: flex;
+	flex-direction: row;
+	background-color: transparent;
+	width: fit-content;
+	padding: 0px 0px 0px 0px;
+	gap: 0px;
 	&-item {
 		display: flex;
 		flex-direction: row;
@@ -24,6 +31,18 @@
 		background: $btn-color;
 		box-shadow: inset -1px -1px 15px rgba(249, 247, 237, 0.7),
 			inset 4px 4px 15px rgba(30, 30, 30, 0.7);
+
+		///min-w769px
+		border-radius: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 0px;
+		width: fit-content;
+		height: fit-content;
+		background: transparent;
+		box-shadow: unset;
 		&-link {
 			width: 100%;
 			height: 100%;
@@ -31,57 +50,27 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			color: $gold-text-color;
+			color: #f5f5f5;
 			text-decoration: none;
 			font-weight: bold;
 			line-height: 24px;
 			font-size: 22px;
 			white-space: nowrap;
-		}
-	}
-}
 
-//media
-/* @media (min-width: 769px) {
-	.menuComponent {
-		display: flex;
-		flex-direction: row;
-		background-color: transparent;
-		width: fit-content;
-		padding: 0px 0px 0px 0px;
-		gap: 0px;
-		&-item {
-			border-radius: 0;
+			//min-w769px
+			width: 100%;
+			height: 100%;
 			display: flex;
-			flex-direction: row;
 			justify-content: center;
 			align-items: center;
-			padding: 0px;
-			width: fit-content;
-			height: fit-content;
-			background: transparent;
-			box-shadow: unset;
-			&-link {
-				width: 100%;
-				height: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				color: $gold-text-color;
-				text-align: center;
-				font-size: 16px;
-				padding: 4px 8px;
-			}
+			color: $gold-text-color;
+			text-align: center;
+			font-size: 16px;
+			padding: 4px 8px;
+
+			// min-w1024px
+			font-size: 20px;
+			padding: 4px 12px;
 		}
 	}
 }
-@media (min-width: 1024px) {
-	.menuComponent {
-		&-item {
-			&-link {
-				font-size: 20px;
-				padding: 4px 12px;
-			}
-		}
-	}
-} */

@@ -1,23 +1,48 @@
 @import '../../style/variables';
 .adresContact {
-	text-align: center;
+	text-align: start;
+	color: $gold-text-color;
 	p {
-		font-weight: normal;
-		font-size: 22px;
-		color: #e1ba87;
+		font-size: 24px;
+		font-weight: bold;
 	}
 	&-adres {
 		cursor: pointer;
-		color: #e1ba87;
 	}
 	&-phone {
-		color: #e1ba87;
+		font-family: 'Rubik', sans-serif;
+		color: $gold-text-color;
+		text-decoration: none;
+		font-weight: normal;
 	}
 }
-
+.adresContactActive {
+	text-align: center;
+	color: #ff9100;
+	text-shadow: 1px 1px 2px #ffc237;
+	p {
+		font-size: 26px;
+		font-weight: bold;
+	}
+	&-adres {
+		cursor: pointer;
+	}
+	&-phone {
+		font-family: 'Rubik', sans-serif;
+		color: #ff9100;
+		text-shadow: 1px 1px 2px #ffc237;
+		text-decoration: none;
+		font-weight: normal;
+	}
+	&-phone {
+		font-family: 'Rubik', sans-serif;
+		color: #ff9100;
+		text-shadow: 1px 1px 2px #ffc237;
+	}
+}
 //media
 
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
 	.adresContact {
 		&-adres-text {
 			text-align: start;
@@ -27,4 +52,4 @@
 			}
 		}
 	}
-}
+} */

@@ -1,4 +1,4 @@
-import './titleComponen.scss';
+import './titleComponent.scss';
 function TitleComponent({ title = '' }) {
 	return <div className="title">{title}</div>;
 }
