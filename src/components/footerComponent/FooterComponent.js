@@ -1,8 +1,8 @@
-import logo from '../../assets/footer/logo.png';
-import telegram from '../../assets/footer/telegram.png';
-import twitter from '../../assets/footer/twitter.png';
-import viber from '../../assets/footer/viber.png';
-import whatsapp from '../../assets/footer/whatsapp.png';
+import logo from '../../assets/footer/logo.webp';
+import telegram from '../../assets/footer/telegram.webp';
+import twitter from '../../assets/footer/twitter.webp';
+import viber from '../../assets/footer/viber.webp';
+import whatsapp from '../../assets/footer/whatsapp.webp';
 
 import './footerComponent.scss';
 

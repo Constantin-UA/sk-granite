@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
-import upArrow from '../../assets/up-arrow.png';
+import upArrow from '../../assets/up-arrow.webp';
 import './upArrow.scss';
 
 function UpArrow() {

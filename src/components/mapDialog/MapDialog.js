@@ -1,5 +1,5 @@
 import MapComponent from '../mapComponent/MapComponent';
-import cros from '../../assets/contacts/cros.png';
+import cros from '../../assets/contacts/cros.webp';
 import './mapDialog.scss';
 function MapDialog({ mapDialogShow, setActive }) {
 	const onClick = () => {

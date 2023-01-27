@@ -1,15 +1,15 @@
+import { Helmet } from 'react-helmet';
+import { lazy, Suspense } from 'react';
 import TitleComponent from '../../titleComponent/TitleComponent';
 import SubtitleComponent from '../../subtitleComponent/SubtitleComponent';
 import TextBoxComponent from '../../textBoxComponent/TextBoxComponent';
 import PhotosetComponent from '../../photosetComponent/PhotosetComponent';
-import img_0 from '../../../assets/headImages/services.png';
-import img_1 from '../../../assets/servicePage/1.png';
-import img_2 from '../../../assets/servicePage/2.png';
-import { Helmet } from 'react-helmet';
-import img_3 from '../../../assets/servicePage/3.png';
-import img_4 from '../../../assets/servicePage/4.png';
-import { lazy, Suspense } from 'react';
 import SpinerComponent from '../../spinerComponent/SpinerComponent';
+import img_0 from '../../../assets/headImages/services.webp';
+import img_1 from '../../../assets/servicePage/1.webp';
+import img_2 from '../../../assets/servicePage/2.webp';
+import img_3 from '../../../assets/servicePage/3.webp';
+import img_4 from '../../../assets/servicePage/4.webp';
 import './servicesPage.scss';
 const texts = [
 	"Для виготовлення пам'ятників ми використовуємо натуральний граніт та мармур. Ви можете замовити вироби з більш ніж десяти видів граніту, що відрізняються за відтінком та технічними характеристиками. Детальніше ознайомитися з кожним окремим видом ви можете зі статей на нашому сайті або за приватної консультації у нашого фахівця.",

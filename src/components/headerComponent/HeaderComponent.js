@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import MenuComponent from '../menuComponent/MenuComponent';
 import AdresContact from '../adresContact/AdresContact';
-import menu from '../../assets/header/btn.svg';
-import cros from '../../assets/header/cros.svg';
+import menu from '../../assets/header/btn.webp';
+import cros from '../../assets/header/cros.webp';
 import './headerComponent.scss';
-import logo from '../../assets/header/Logo.png';
+import logo from '../../assets/header/Logo.webp';
 function HeaderComponent({ showMap }) {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showCros, setShowCros] = useState(false);

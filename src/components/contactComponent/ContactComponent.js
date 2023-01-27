@@ -1,6 +1,6 @@
 import AdresContact from '../adresContact/AdresContact';
-import face from '../../assets/contacts/facebook.png';
-import insta from '../../assets/contacts/instagram.png';
+import face from '../../assets/contacts/facebook.webp';
+import insta from '../../assets/contacts/instagram.webp';
 import './contactComponent.scss';
 function ContactComponent({ showMap }) {
 	return (
