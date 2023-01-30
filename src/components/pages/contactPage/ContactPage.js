@@ -19,7 +19,7 @@ function ContactPage({ showMap }) {
 	return (
 		<section className="contactPage">
 			<Helmet>
-				<title>SK Granite - contacts</title>
+				<title>Як нас знайти</title>
 			</Helmet>
 			<div className="contactPage-wrapper">
 				<TitleComponent title="Контакти" />

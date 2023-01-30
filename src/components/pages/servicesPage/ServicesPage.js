@@ -25,7 +25,7 @@ function ServicesPage() {
 	return (
 		<section className="servicesPage">
 			<Helmet>
-				<title>SK Granite - service</title>
+				<title>Що ми пропонуємо</title>
 			</Helmet>
 			<div className="servicesPage-wrapper">
 				<TitleComponent title="Послуги" />

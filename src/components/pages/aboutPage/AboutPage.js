@@ -26,7 +26,7 @@ function aboutPage() {
 	return (
 		<section className="aboutPage">
 			<Helmet>
-				<title>SK Granite - about</title>
+				<title>Хто ми такі</title>
 			</Helmet>
 			<div className="aboutPage-wrapper">
 				<TitleComponent title="Про нас" />

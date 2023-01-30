@@ -28,34 +28,7 @@ function MainPage() {
 	return (
 		<section className="mainPage">
 			<Helmet>
-				<title>Виготовлення пам'ятників з мармуру та граніту у Дніпрі.</title>
-				<meta name="title" content="Виготовлення пам'ятників з мармуру та граніту у Дніпрі." />
-				<meta
-					name="description"
-					content="Замовити гранітний пам'ятник в Дніпропетровській області, а також по всій Україні."
-				/>
-				<meta property="og:type" content="website" />
-				<meta property="og:url" content="http://sk-granite.dp.ua/" />
-				<meta
-					property="og:title"
-					content="Виготовлення пам'ятників з мармуру та граніту у Дніпрі."
-				/>
-				<meta
-					property="og:description"
-					content="Замовити гранітний пам'ятник в Дніпропетровській області, а також по всій Україні."
-				/>
-				<meta property="og:image" content="%PUBLIC_URL%/faviconImg.png" />
-				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="http://sk-granite.dp.ua/" />
-				<meta
-					property="twitter:title"
-					content="Виготовлення пам'ятників з мармуру та граніту у Дніпрі."
-				/>
-				<meta
-					property="twitter:description"
-					content="Замовити гранітний пам'ятник в Дніпропетровській області, а також по всій Україні."
-				/>
-				<meta property="twitter:image" content="%PUBLIC_URL%/faviconImg.png" />
+				<title>Пам'ятники з мармуру та граніту у Дніпрі.</title>
 			</Helmet>
 			<div className="mainPage-wrapper">
 				<TitleComponent title="Пам’ятники з граніту м. Дніпро" />
